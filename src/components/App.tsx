@@ -131,7 +131,7 @@ function App() {
       autoZoomIfNecessary();
     }
 
-    if (MIXPANEL_TOKEN) mixpanel.track("Performed undo");
+    if (MIXPANEL_TOKEN) mixpanel.track("Performed undo", {user: "Iterate User", num:1, date:Date.now()});
   };
 
   const redo = () => {
